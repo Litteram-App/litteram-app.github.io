@@ -1,0 +1,26 @@
+# ── Dependencies ─────────────────────────────────────────────────────────────
+node_modules/
+
+# ── Build output ──────────────────────────────────────────────────────────────
+dist/
+.output/
+.vinxi/
+.tanstack/
+
+# ── Environment variables ─────────────────────────────────────────────────────
+.env.local
+.env.*.local
+
+# ── Local dev assets (downloaded from Lovable CDN for local development only) ─
+# On Lovable / GitHub Pages the images are served from the Lovable CDN.
+public/images/
+
+# ── Editor & OS ───────────────────────────────────────────────────────────────
+.DS_Store
+Thumbs.db
+*.log
+.idea/
+.vscode/
+
+# ── Misc ──────────────────────────────────────────────────────────────────────
+*.local
