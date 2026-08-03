@@ -10,7 +10,6 @@ import {
 import { useEffect, type ReactNode } from "react";
 
 import appCss from "../styles.css?url";
-import { reportLovableError } from "../lib/lovable-error-reporting";
 
 function NotFoundComponent() {
   return (
@@ -39,9 +38,6 @@ function NotFoundComponent() {
 function ErrorComponent({ error, reset }: { error: Error; reset: () => void }) {
   console.error(error);
   const router = useRouter();
-  useEffect(() => {
-    reportLovableError(error, { boundary: "tanstack_root_error_component" });
-  }, [error]);
 
   return (
     <div className="flex min-h-screen items-center justify-center bg-background px-4">
@@ -87,7 +83,7 @@ export const Route = createRootRouteWithContext<{ queryClient: QueryClient }>()(
           content:
             "Litteram is a fast, native Markdown editor with live preview. Your text is formatted right where you write it — no split panes.",
         },
-        { name: "author", content: "Lovable" },
+        { name: "author", content: "Litteram" },
         {
           property: "og:title",
           content: "Litteram — A native Markdown editor with live preview",
@@ -99,7 +95,7 @@ export const Route = createRootRouteWithContext<{ queryClient: QueryClient }>()(
         },
         { property: "og:type", content: "website" },
         { name: "twitter:card", content: "summary" },
-        { name: "twitter:site", content: "@Lovable" },
+        { name: "twitter:site", content: "@Litteram" },
         {
           name: "twitter:title",
           content: "Litteram — A native Markdown editor with live preview",
@@ -112,12 +108,12 @@ export const Route = createRootRouteWithContext<{ queryClient: QueryClient }>()(
         {
           property: "og:image",
           content:
-            "https://pub-bb2e103a32db4e198524a2e9ed8f35b4.r2.dev/21d213bb-81b6-4d40-a0cf-99a633c52b9c/id-preview-40489273--adaaf99b-93d4-49db-a70d-f08a7fcb810d.lovable.app-1782822242087.png",
+            "/images/litteram-share.png",
         },
         {
           name: "twitter:image",
           content:
-            "https://pub-bb2e103a32db4e198524a2e9ed8f35b4.r2.dev/21d213bb-81b6-4d40-a0cf-99a633c52b9c/id-preview-40489273--adaaf99b-93d4-49db-a70d-f08a7fcb810d.lovable.app-1782822242087.png",
+            "/images/litteram-share.png",
         },
       ],
       links: [
