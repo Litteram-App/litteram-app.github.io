@@ -56,6 +56,14 @@ export default defineConfig({
     output: {
       publicDir: "docs",
     },
+    publicAssets: [
+      {
+        dir: "public",
+        maxAge: 0,
+        baseURL: "/",
+        fallthrough: true,
+      },
+    ],
   },
   vite: {
     plugins: [localAssetsPlugin()],
