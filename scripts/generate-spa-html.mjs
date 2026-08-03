@@ -37,7 +37,7 @@ let html = await res.text();
 
 // Fix image URLs - Lovable CDN paths (__l5e/assets-v1/...) don't exist on GitHub Pages
 // Replace with local /images/ path since images were copied there
-html = html.replace(/__l5e\/assets-v1\/[a-f0-9-]+\/([a-zA-Z0-9-]+\.(png|jpg|jpeg|webp|svg|gif))/g, "/images/$1");
+html = html.replace(/\/?__l5e\/assets-v1\/[a-f0-9-]+\/([a-zA-Z0-9-]+\.(png|jpg|jpeg|webp|svg|gif))/g, "/images/$1");
 
 if (!html.includes("<!DOCTYPE html") && !html.includes("<!doctype html")) {
   console.error("SSR output does not look like a full HTML document:");
