@@ -1,41 +1,47 @@
 /**
  * Generates docs/index.html and docs/404.html for GitHub Pages SPA deployment.
- * Runs after `vite build` to create the HTML entry points from the built assets.
+ * Runs after `vite build` to SSR-render the root route using the built nitro
+ * SSR handler and write the output to the docs directory.
+ *
+ * TanStack Start uses hydrateRoot(document), which requires SSR-rendered HTML
+ * (a full <html>…</html> document). A bare <div id="app"> shell causes the
+ * "Invariant failed" error at startup.
  */
-import { readdirSync, writeFileSync, readFileSync } from "node:fs";
-import { resolve, join } from "node:path";
+import { writeFileSync } from "node:fs";
+import { resolve } from "node:path";
+import { pathToFileURL } from "node:url";
 
 const docsDir = resolve(import.meta.dirname, "../docs");
-const assetsDir = join(docsDir, "assets");
+const ssrHandlerPath = resolve(
+  import.meta.dirname,
+  "../node_modules/.nitro/vite/services/ssr/index.js",
+);
 
-// Find the built JS and CSS entry files
-const assets = readdirSync(assetsDir);
-const mainJs = assets.find((f) => f.startsWith("index-") && f.endsWith(".js"));
-const routesJs = assets.find((f) => f.startsWith("routes-") && f.endsWith(".js"));
-const mainCss = assets.find((f) => f.startsWith("styles-") && f.endsWith(".css"));
+console.log("Loading SSR handler from:", ssrHandlerPath);
 
-if (!mainJs) {
-  console.error("Could not find main JS bundle in docs/assets/");
+const { default: handler } = await import(
+  pathToFileURL(ssrHandlerPath).toString()
+);
+
+// Render the root route
+const req = new Request("http://localhost/");
+const res = await handler.fetch(req, {}, {});
+
+if (!res.ok) {
+  const body = await res.text();
+  console.error(`SSR handler returned ${res.status} for /:\n${body}`);
   process.exit(1);
 }
 
-const html = `<!DOCTYPE html>
-<html lang="en">
-  <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Litteram</title>
-    ${mainCss ? `<link rel="stylesheet" crossorigin href="/assets/${mainCss}" />` : ""}
-    ${routesJs ? `<script type="module" crossorigin src="/assets/${routesJs}"></script>` : ""}
-    <script type="module" crossorigin src="/assets/${mainJs}"></script>
-  </head>
-  <body>
-    <div id="app"></div>
-  </body>
-</html>
-`;
+const html = await res.text();
 
-writeFileSync(join(docsDir, "index.html"), html);
-writeFileSync(join(docsDir, "404.html"), html);
+if (!html.includes("<!DOCTYPE html") && !html.includes("<!doctype html")) {
+  console.error("SSR output does not look like a full HTML document:");
+  console.error(html.substring(0, 300));
+  process.exit(1);
+}
 
-console.log("Generated docs/index.html and docs/404.html");
+writeFileSync(resolve(docsDir, "index.html"), html);
+writeFileSync(resolve(docsDir, "404.html"), html);
+
+console.log(`Generated docs/index.html and docs/404.html (${html.length} bytes)`);
