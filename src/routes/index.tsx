@@ -4,6 +4,8 @@ import { HeroSection } from "@/components/landing/HeroSection";
 import { FeaturesSection } from "@/components/landing/FeaturesSection";
 import { ShortcutsSection } from "@/components/landing/ShortcutsSection";
 import { PrivacySection } from "@/components/landing/PrivacySection";
+import { MarkdownSection } from "@/components/landing/MarkdownSection";
+import { InstallSection } from "@/components/landing/InstallSection";
 import { FAQSection } from "@/components/landing/FAQSection";
 import { CTASection } from "@/components/landing/CTASection";
 import { Footer } from "@/components/landing/Footer";
@@ -49,6 +51,8 @@ function Index() {
         <FeaturesSection />
         <ShortcutsSection />
         <PrivacySection />
+        <MarkdownSection />
+        <InstallSection />
         <FAQSection />
         <CTASection />
       </main>
