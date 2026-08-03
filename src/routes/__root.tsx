@@ -77,7 +77,7 @@ export const Route = createRootRouteWithContext<{ queryClient: QueryClient }>()(
       meta: [
         { charSet: "utf-8" },
         { name: "viewport", content: "width=device-width, initial-scale=1" },
-        { title: "Litteram — A native Markdown editor with live preview" },
+        { title: "Litteram • A Markdown editor with live preview for macOS" },
         {
           name: "description",
           content:
@@ -86,7 +86,7 @@ export const Route = createRootRouteWithContext<{ queryClient: QueryClient }>()(
         { name: "author", content: "Litteram" },
         {
           property: "og:title",
-          content: "Litteram — A native Markdown editor with live preview",
+          content: "Litteram • A Markdown editor with live preview for macOS",
         },
         {
           property: "og:description",
@@ -98,7 +98,7 @@ export const Route = createRootRouteWithContext<{ queryClient: QueryClient }>()(
         { name: "twitter:site", content: "@Litteram" },
         {
           name: "twitter:title",
-          content: "Litteram — A native Markdown editor with live preview",
+          content: "Litteram • A Markdown editor with live preview for macOS",
         },
         {
           name: "twitter:description",
@@ -120,6 +120,10 @@ export const Route = createRootRouteWithContext<{ queryClient: QueryClient }>()(
         {
           rel: "stylesheet",
           href: appCss,
+        },
+        {
+          rel: "canonical",
+          href: "https://litteram-app.github.io/",
         },
       ],
     }),
