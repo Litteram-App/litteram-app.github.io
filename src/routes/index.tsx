@@ -14,7 +14,7 @@ import iconAsset from "@/assets/litteram-logo.png.asset.json";
 export const Route = createFileRoute("/")({
   head: () => ({
     meta: [
-      { title: "Litteram — A native Markdown editor with live preview" },
+      { title: "Litteram • Native Markdown Editor for Mac" },
       {
         name: "description",
         content:
@@ -22,12 +22,12 @@ export const Route = createFileRoute("/")({
       },
       {
         property: "og:title",
-        content: "Litteram — A native Markdown editor with live preview",
+        content: "Litteram • Native Markdown Editor for Mac",
       },
       {
         property: "og:description",
         content:
-          "A fast, native Markdown editor with live preview. No split panes — just one calm surface.",
+          "Litteram is a fast, local-first Markdown editor for macOS. Write with live formatting, open real Markdown files, export to PDF, and keep everything on your Mac",
       },
       { property: "og:image", content: iconAsset.url },
       { property: "og:url", content: "/" },

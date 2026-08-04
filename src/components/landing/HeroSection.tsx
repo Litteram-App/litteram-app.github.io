@@ -22,7 +22,7 @@ export function HeroSection() {
           transition={{ duration: 0.7, ease: [0.22, 1, 0.36, 1], delay: 0.08 }}
           className="mt-6 text-xl sm:text-2xl text-foreground/80 font-serif italic"
         >
-          The simple, fast Markdown editor for Mac.
+          The simple, native Markdown editor for Mac.
         </motion.p>
         <motion.p
           initial={{ opacity: 0, y: 12 }}
@@ -30,9 +30,7 @@ export function HeroSection() {
           transition={{ duration: 0.7, ease: [0.22, 1, 0.36, 1], delay: 0.16 }}
           className="mt-5 mx-auto max-w-xl text-base text-muted-foreground leading-relaxed"
         >
-          Write Markdown the way it was meant to be: one calm surface, instant
-          formatting, and no split panes. Your cursor reveals the source;
-          everything else stays beautiful.
+          Litteram is a native Markdown editor for macOS that lets you write directly in real .md files. It combines live formatting, cursor-aware editing, native document tabs, PDF export, and a distraction-free interface — without accounts, cloud storage, tracking, or subscriptions.
         </motion.p>
         <motion.div
           initial={{ opacity: 0, y: 12 }}
