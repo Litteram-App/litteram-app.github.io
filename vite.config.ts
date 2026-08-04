@@ -1,41 +1,37 @@
-// @lovable.dev/vite-tanstack-config already includes the following — do NOT add them manually
-// or the app will break with duplicate plugins:
-//   - tanstackStart, viteReact, tailwindcss, tsConfigPaths, nitro (build-only using cloudflare as a default target),
-//     componentTagger (dev-only), VITE_* env injection, @ path alias, React/TanStack dedupe,
-//     error logger plugins, and sandbox detection (port/host/strictPort).
-// You can pass additional config via defineConfig({ vite: { ... }, etc... }) if needed.
-import { defineConfig } from "@lovable.dev/vite-tanstack-config";
-import type { Plugin } from "vite";
-import fs from "node:fs";
-import path from "node:path";
+import { defineConfig } from 'vite';
+import { tanstackStart } from '@tanstack/react-start/plugin/vite';
+import viteReact from '@vitejs/plugin-react';
+import type { Plugin } from 'vite';
+import fs from 'node:fs';
+import path from 'node:path';
 
 /**
- * Serves Lovable CDN assets (/__l5e/assets-v1/*) from local public/images/ files.
- * This is a fallback for local development when LOVABLE_PREVIEW_HOST is not set.
+ * Serves TanStack Start CDN assets (/__l5e/assets-v1/*) from local public/images/ files.
+ * This is a fallback for local development when the TanStack Start dev server is not available.
  * Images must be downloaded first with: scripts/download-assets.sh
  */
 function localAssetsPlugin(): Plugin {
   return {
-    name: "local-assets-fallback",
-    apply: "serve",
+    name: 'local-assets-fallback',
+    apply: 'serve',
     configureServer(server) {
       server.middlewares.use((req, res, next) => {
         const match = req.url?.match(/^\/__l5e\/assets-v1\/[^/]+\/(.+)$/);
         if (!match) return next();
         const filename = match[1];
-        const localPath = path.resolve("public/images", filename);
+        const localPath = path.resolve('public/images', filename);
         if (fs.existsSync(localPath)) {
           const ext = path.extname(filename).toLowerCase();
           const mime =
-            ext === ".png"
-              ? "image/png"
-              : ext === ".webp"
-                ? "image/webp"
-                : ext === ".jpg" || ext === ".jpeg"
-                  ? "image/jpeg"
-                  : "application/octet-stream";
-          res.setHeader("Content-Type", mime);
-          res.setHeader("Cache-Control", "public, max-age=86400");
+            ext === '.png'
+              ? 'image/png'
+              : ext === '.webp'
+                ? 'image/webp'
+                : ext === '.jpg' || ext === '.jpeg'
+                  ? 'image/jpeg'
+                  : 'application/octet-stream';
+          res.setHeader('Content-Type', mime);
+          res.setHeader('Cache-Control', 'public, max-age=86400');
           fs.createReadStream(localPath).pipe(res);
         } else {
           next();
@@ -46,26 +42,33 @@ function localAssetsPlugin(): Plugin {
 }
 
 export default defineConfig({
-  tanstackStart: {
-    // Redirect TanStack Start's bundled server entry to src/server.ts (our SSR error wrapper).
-    // nitro/vite builds from this
-    server: { entry: "server" },
+  resolve: {
+    tsconfigPaths: true,
   },
+  server: {
+    port: 3000,
+  },
+  plugins: [
+    tanstackStart({
+      // Redirect TanStack Start's bundled server entry to src/server.ts (our SSR error wrapper).
+      server: { entry: 'server' },
+    }),
+    // react's vite plugin must come after start's vite plugin
+    viteReact(),
+    localAssetsPlugin(),
+  ],
   nitro: {
-    preset: "github_pages",
+    preset: 'github_pages',
     output: {
-      publicDir: "docs",
+      publicDir: 'docs',
     },
     publicAssets: [
       {
-        dir: "public",
+        dir: 'public',
         maxAge: 0,
-        baseURL: "/",
+        baseURL: '/',
         fallthrough: true,
       },
     ],
-  },
-  vite: {
-    plugins: [localAssetsPlugin()],
   },
 });
