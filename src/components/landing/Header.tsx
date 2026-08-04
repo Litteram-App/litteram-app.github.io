@@ -12,8 +12,8 @@ export function Header() {
           <a href="#features" className="hover:text-foreground transition-colors">Features</a>
           <a href="#shortcuts" className="hover:text-foreground transition-colors">Shortcuts</a>
           <a href="#privacy" className="hover:text-foreground transition-colors">Privacy</a>
-          <a href="#install" className="hover:text-foreground transition-colors">Install</a>
           <a href="#markdown" className="hover:text-foreground transition-colors">Markdown</a>
+          <a href="#install" className="hover:text-foreground transition-colors">Install</a>
           <a href="#faq" className="hover:text-foreground transition-colors">FAQ</a>
           <a
             href="#download"
