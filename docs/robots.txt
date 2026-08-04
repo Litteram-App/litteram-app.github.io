@@ -1,3 +1,7 @@
 User-agent: *
-Disallow: 
+Allow: /
 Sitemap: https://litteram-app.github.io/sitemap.xml
+
+
+
+
