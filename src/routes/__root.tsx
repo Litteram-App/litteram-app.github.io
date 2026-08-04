@@ -77,33 +77,33 @@ export const Route = createRootRouteWithContext<{ queryClient: QueryClient }>()(
       meta: [
         { charSet: "utf-8" },
         { name: "viewport", content: "width=device-width, initial-scale=1" },
-        { title: "Litteram • A Markdown editor with live preview for macOS" },
+        { title: "Litteram • The simple, native Markdown editor for Mac" },
         {
           name: "description",
           content:
-            "Litteram is a fast, native Markdown editor with live preview. Your text is formatted right where you write it — no split panes.",
+            "Litteram is a native Markdown editor for macOS that lets you write directly in real .md files: private, live formatting, PDF export, distraction-free interface.",
         },
         { name: "author", content: "Litteram" },
         {
           property: "og:title",
-          content: "Litteram • A Markdown editor with live preview for macOS",
+          content: "Litteram • The simple, native Markdown editor for Mac",
         },
         {
           property: "og:description",
           content:
-            "Litteram is a fast, native Markdown editor with live preview. Your text is formatted right where you write it — no split panes.",
+            "Litteram is a native Markdown editor for macOS that lets you write directly in real .md files: private, live formatting, PDF export, distraction-free interface.",
         },
         { property: "og:type", content: "website" },
         { name: "twitter:card", content: "summary" },
         { name: "twitter:site", content: "@Litteram" },
         {
           name: "twitter:title",
-          content: "Litteram • A Markdown editor with live preview for macOS",
+          content: "Litteram • The simple, native Markdown editor for Mac",
         },
         {
           name: "twitter:description",
           content:
-            "Litteram is a fast, native Markdown editor with live preview. Your text is formatted right where you write it — no split panes.",
+            "Litteram is a native Markdown editor for macOS that lets you write directly in real .md files: private, live formatting, PDF export, distraction-free interface.",
         },
         {
           property: "og:image",

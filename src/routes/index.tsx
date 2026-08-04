@@ -18,7 +18,7 @@ export const Route = createFileRoute("/")({
       {
         name: "description",
         content:
-          "Litteram is a fast, native Markdown editor with live preview. Your text is formatted right where you write it — no split panes.",
+          "Litteram is a native Markdown editor for macOS that lets you write directly in real .md files: private, live formatting, PDF export, distraction-free interface.",
       },
       {
         property: "og:title",
@@ -27,7 +27,7 @@ export const Route = createFileRoute("/")({
       {
         property: "og:description",
         content:
-          "Litteram is a fast, local-first Markdown editor for macOS. Write with live formatting, open real Markdown files, export to PDF, and keep everything on your Mac",
+          "Litteram is a native Markdown editor for macOS that lets you write directly in real .md files: private, live formatting, PDF export, distraction-free interface.",
       },
       { property: "og:image", content: iconAsset.url },
       { property: "og:url", content: "/" },
