@@ -1,0 +1,31 @@
+# Litteram
+
+Litteram is a native Markdown editor for macOS. It lets people edit real Markdown files locally with inline live formatting, cursor-aware editing, native document tabs, PDF export, and a distraction-free interface.
+
+## Product
+
+- Native Markdown editor for macOS
+- Requires macOS 13 Ventura or later
+- Local-first: files stay on the user's Mac
+- No account, cloud storage, tracking, analytics, or subscription
+- Supports `.md`, `.markdown`, and `.txt` files
+- Free and open source under GPLv3
+
+## Key pages
+
+- [Home](https://litteram-app.github.io/): product overview and download
+- [Features](https://litteram-app.github.io/features.html): editor features and capabilities
+- [Shortcuts](https://litteram-app.github.io/shortcuts.html): keyboard shortcuts
+- [Privacy](https://litteram-app.github.io/privacy.html): local-first privacy model
+- [Markdown](https://litteram-app.github.io/markdown.html): Markdown support and benefits
+- [Install](https://litteram-app.github.io/install.html): macOS installation instructions
+- [FAQ](https://litteram-app.github.io/faq.html): frequently asked questions
+
+## Download and source
+
+- [Download Litteram for macOS](https://github.com/Litteram-App/litteram-app.github.io/releases/latest/download/Litteram.zip)
+- [Source repository](https://github.com/Litteram-App/litteram-app.github.io)
+
+## License
+
+Litteram is released under the GNU General Public License v3.0.

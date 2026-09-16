@@ -1,0 +1,80 @@
+# Litteram
+
+## Summary
+
+Litteram is a native Markdown editor for macOS for people who want a fast, focused writing tool that works directly with real `.md` files. It renders Markdown inline in the document, keeps the source visible while editing, and stores documents locally on the user's Mac.
+
+## Who it is for
+
+Litteram is designed for writers, developers, students, researchers, and anyone who works with Markdown notes, documentation, articles, or books without wanting a cloud workspace or proprietary document format.
+
+## Features
+
+- Live inline Markdown formatting without a split preview pane
+- Cursor-aware source markers while editing
+- Formatting popover and smart URL paste
+- Tables, GitHub-style alerts, checklists, inline images, code blocks, and color swatches
+- Native macOS documents with autosave, versions, and document tabs
+- Finder-style sidebar with Open, Favorites, and Recents
+- Native Find and Replace and Go to Line
+- Light, Dark, and System appearance modes
+- Incremental TextKit-based formatting
+- Opens `.md`, `.markdown`, and `.txt` files while preserving encoding on save
+- Print and PDF export with real A4 pagination
+- Built-in searchable Markdown help
+
+## Keyboard shortcuts
+
+- Formatting: Bold `Command-B`, Italic `Command-I`, Inline code `Command-E`, Link `Command-K`, Toggle checkbox `Command-L`
+- Lines and lists: Move line `Option-Up/Down`, Duplicate line `Command-D`, Indent/outdent `Tab` and `Shift-Tab`
+- Files: New `Command-N`, Open `Command-O`, Save `Command-S`, Save As `Shift-Command-S`, Close `Command-W`
+- Documents: New tab `Command-T`, Print `Command-P`
+- View: Toggle sidebar `Control-Command-S`, Readable width `Shift-Command-L`, Line numbers `Control-Command-L`, Go to line `Option-Command-L`
+- Find: Find `Command-F`, Find and Replace `Option-Command-F`, Find next/previous `Command-G` and `Shift-Command-G`
+- Help: Litteram Help `Command-?`
+
+## Privacy
+
+Litteram is local-first. Documents remain wherever the user stores them. The app does not require an account and does not use cloud storage, tracking, analytics, telemetry, or remote servers. Users can choose iCloud, Dropbox, git, or another sync method independently.
+
+## Markdown support
+
+Litteram reads and writes standard Markdown files. It is suitable for notes, documentation, articles, and books. Markdown stays readable in ordinary text editors and can be versioned with git or converted to HTML and PDF.
+
+## Installation
+
+1. Download the latest ZIP from GitHub Releases.
+2. Unzip it and move `Litteram.app` to `/Applications`.
+3. Open the app once. macOS may block the first launch.
+4. Open System Settings, then Privacy & Security, and choose Open Anyway.
+5. Confirm the dialog and launch Litteram normally.
+
+## FAQ
+
+### Is Litteram free?
+
+Yes. Litteram is free and open source under the GNU General Public License v3.0.
+
+### Which platforms does it support?
+
+Litteram is a native macOS app and requires macOS 13 Ventura or later.
+
+### Where are files stored?
+
+Files are stored locally on disk wherever the user chooses. Litteram does not upload or relocate them.
+
+### What Markdown flavor does it use?
+
+Litteram uses CommonMark with common GitHub-Flavored Markdown extensions, including GitHub-style alerts and inline color swatches.
+
+## Links
+
+- Website: https://litteram-app.github.io/
+- Features: https://litteram-app.github.io/features.html
+- Shortcuts: https://litteram-app.github.io/shortcuts.html
+- Privacy: https://litteram-app.github.io/privacy.html
+- Markdown: https://litteram-app.github.io/markdown.html
+- Install: https://litteram-app.github.io/install.html
+- FAQ: https://litteram-app.github.io/faq.html
+- Download: https://github.com/Litteram-App/litteram-app.github.io/releases/latest/download/Litteram.zip
+- Source: https://github.com/Litteram-App/litteram-app.github.io
