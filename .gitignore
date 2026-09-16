@@ -1,9 +1,12 @@
-# Editor & OS
-.DS_Store
+# Hidden local files and tool configuration
+.*
+!.gitignore
+!.github/
+!.github/**
+
+# Common generated and OS files
 Thumbs.db
 *.log
-.idea/
-.vscode/
 
 # Local dependencies and generated output
 node_modules/
@@ -11,10 +14,6 @@ dist/
 .output/
 .vinxi/
 .tanstack/
-
-# Local configuration
-.kilo/
-.continue/
 
 # Temporary files
 *.local
