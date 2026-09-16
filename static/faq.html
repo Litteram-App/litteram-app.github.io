@@ -12,7 +12,7 @@
       { "@context": "https://schema.org", "@type": "WebPage", "name": "Litteram FAQ", "description": "Frequently asked questions about Litteram.", "url": "https://litteram-app.github.io/faq.html", "isPartOf": { "@type": "WebSite", "name": "Litteram", "url": "https://litteram-app.github.io/" } }
     </script>
   </head>
-  <body data-page="faq">
+  <body>
     <header class="site-header">
       <div class="container header-inner">
         <a class="brand" href="index.html"><img src="images/litteram-logo.png" alt="Litteram" /><span>Litteram</span></a>
@@ -27,7 +27,46 @@
         ><a class="button" href="https://github.com/Litteram-App/litteram-app.github.io/releases/latest/download/Litteram.zip" target="_blank">Download</a>
       </nav>
     </header>
-    <main></main>
+    <main>
+      <section class="section">
+        <div class="container narrow">
+          <div class="intro center reveal">
+            <p class="eyebrow">FAQ</p>
+            <h1>Common questions.</h1>
+          </div>
+          <div class="faq-list">
+            <details class="reveal">
+              <summary>Is Litteram free?</summary>
+              <p>Yes. Litteram is free and open source, released under the GNU General Public License v3.0. Use it, study it, modify it, redistribute it - no accounts, no subscriptions.</p>
+            </details>
+            <details class="reveal">
+              <summary>Which platforms does it run on?</summary>
+              <p>Litteram is a native macOS app. It requires macOS 13 (Ventura) or later.</p>
+            </details>
+            <details class="reveal">
+              <summary>How do I install it?</summary>
+              <p>Download the latest zip from GitHub Releases, unzip it, and move Litteram.app to /Applications. macOS may block the first launch; use System Settings, Privacy &amp; Security, Open Anyway.</p>
+            </details>
+            <details class="reveal">
+              <summary>How is this different from a split-pane editor?</summary>
+              <p>Litteram renders the preview inline, in place, so you only ever look at one surface. The line you're editing temporarily shows its source.</p>
+            </details>
+            <details class="reveal">
+              <summary>What Markdown flavor does it use?</summary>
+              <p>CommonMark with common GitHub-Flavored Markdown extensions, plus GitHub-style quote alerts and inline color swatches.</p>
+            </details>
+            <details class="reveal">
+              <summary>Where are my files stored?</summary>
+              <p>On your disk, wherever you choose. Every file is a native macOS document. Sync with iCloud, Dropbox or git - your call.</p>
+            </details>
+            <details class="reveal">
+              <summary>What about performance?</summary>
+              <p>Litteram reformats incrementally: only the edited paragraph on each keystroke and only two lines on cursor moves. Zero external dependencies.</p>
+            </details>
+          </div>
+        </div>
+      </section>
+    </main>
     <footer class="footer">
       <div class="container footer-inner">
         <a class="brand" href="index.html"><img src="images/litteram-logo.png" alt="Litteram" /><span>Litteram</span></a>
