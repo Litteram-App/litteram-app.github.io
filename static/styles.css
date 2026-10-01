@@ -259,7 +259,7 @@ button {
 .showcase-frame {
   position: relative;
   overflow: hidden;
-  aspect-ratio: 1920/1434;
+  aspect-ratio: 1920/1250;
   border-radius: 16px;
 }
 .showcase-frame img {
