@@ -5,7 +5,7 @@ Litteram is a native Markdown editor for macOS. It lets people edit real Markdow
 ## Product
 
 - Native Markdown editor for macOS
-- Requires macOS 13 Ventura or later
+- Requires macOS 15 Sequoia or later
 - Local-first: files stay on the user's Mac
 - No account, cloud storage, tracking, analytics, or subscription
 - Supports `.md`, `.markdown`, and `.txt` files
@@ -24,6 +24,7 @@ Litteram is a native Markdown editor for macOS. It lets people edit real Markdow
 ## Download and source
 
 - [Download Litteram for macOS](https://github.com/Litteram-App/litteram-app.github.io/releases/latest/download/Litteram.zip)
+- Install with Homebrew: `brew install --cask litteram-app/tap/litteram`
 - [Source repository](https://github.com/Litteram-App/litteram-app.github.io)
 
 ## License

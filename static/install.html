@@ -3,7 +3,7 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
-    <meta name="description" content="Install Litteram, the native Markdown editor for Mac. Download the app, move it to Applications, and approve the first launch in macOS." />
+    <meta name="description" content="Install Litteram, the native Markdown editor for Mac. Install with Homebrew, or download the app, move it to Applications, and approve the first launch in macOS." />
     <title>Install Litteram Markdown Editor on Mac</title>
     <link rel="canonical" href="https://litteram-app.github.io/install.html" />
     <link rel="icon" href="images/litteram-logo.png" />
@@ -45,13 +45,21 @@
           <div class="intro narrow reveal">
             <p class="eyebrow">Install</p>
             <h1>Get up and running.</h1>
-            <p>Litteram is a native Mac app distributed outside the App Store. The first launch requires a one-time approval in System Settings.</p>
+            <p>Litteram is a native Mac app distributed outside the App Store. Install it with Homebrew, or download it and approve the first launch once in System Settings.</p>
           </div>
+          <div class="brew reveal">
+            <h3>Install with Homebrew</h3>
+            <p>One command, and Litteram opens right away - no extra approval needed.</p>
+            <pre><code>brew install --cask litteram-app/tap/litteram</code></pre>
+            <p>To update to a new version:</p>
+            <pre><code>brew upgrade --cask litteram</code></pre>
+          </div>
+          <h2 class="install-subhead reveal">Or download it</h2>
           <div class="notice reveal">
             <b>ⓘ</b>
             <div>
               <strong>Signed for local use</strong>
-              <p>Litteram is signed with an ad-hoc certificate. The first time you open it, macOS blocks it. This is expected - and safe to allow.</p>
+              <p>Litteram is signed with an ad-hoc certificate. The first time you open a downloaded copy, macOS blocks it. This is expected - and safe to allow.</p>
             </div>
           </div>
           <ol class="steps">

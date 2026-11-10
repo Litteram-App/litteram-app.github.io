@@ -43,6 +43,16 @@ Litteram reads and writes standard Markdown files. It is suitable for notes, doc
 
 ## Installation
 
+With Homebrew:
+
+```
+brew install --cask litteram-app/tap/litteram
+```
+
+Update with `brew upgrade --cask litteram`. The Homebrew version opens right away.
+
+Or download it manually:
+
 1. Download the latest ZIP from GitHub Releases.
 2. Unzip it and move `Litteram.app` to `/Applications`.
 3. Open the app once. macOS may block the first launch.
@@ -57,7 +67,7 @@ Yes. Litteram is free and open source under the GNU General Public License v3.0.
 
 ### Which platforms does it support?
 
-Litteram is a native macOS app and requires macOS 13 Ventura or later.
+Litteram is a native macOS app and requires macOS 15 Sequoia or later.
 
 ### Where are files stored?
 
