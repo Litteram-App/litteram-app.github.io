@@ -14,6 +14,15 @@
     });
   });
 
+  // Video della home: un clic lo mette in pausa, un altro lo fa ripartire.
+  var video = document.querySelector(".showcase-frame video");
+  if (video) {
+    video.addEventListener("click", function () {
+      if (video.paused) video.play();
+      else video.pause();
+    });
+  }
+
   var menu = document.querySelector(".menu-button");
   var nav = document.querySelector(".mobile-nav");
   if (menu && nav) {
