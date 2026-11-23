@@ -79,12 +79,12 @@ Litteram uses CommonMark with common GitHub-Flavored Markdown extensions, includ
 
 ## Links
 
-- Website: https://litteram-app.github.io/
-- Features: https://litteram-app.github.io/features.html
-- Shortcuts: https://litteram-app.github.io/shortcuts.html
-- Privacy: https://litteram-app.github.io/privacy.html
-- Markdown: https://litteram-app.github.io/markdown.html
-- Install: https://litteram-app.github.io/install.html
-- FAQ: https://litteram-app.github.io/faq.html
+- Website: https://litteram.getapp.it/
+- Features: https://litteram.getapp.it/features.html
+- Shortcuts: https://litteram.getapp.it/shortcuts.html
+- Privacy: https://litteram.getapp.it/privacy.html
+- Markdown: https://litteram.getapp.it/markdown.html
+- Install: https://litteram.getapp.it/install.html
+- FAQ: https://litteram.getapp.it/faq.html
 - Download: https://github.com/Litteram-App/litteram-app.github.io/releases/latest/download/Litteram.zip
 - Source: https://github.com/Litteram-App/litteram-app.github.io

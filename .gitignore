@@ -1,6 +1,7 @@
 # Hidden local files and tool configuration
 .*
 !.gitignore
+!.nojekyll
 !.github/
 !.github/**
 

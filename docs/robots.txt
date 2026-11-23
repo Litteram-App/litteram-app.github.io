@@ -1,0 +1,4 @@
+User-agent: *
+Allow: /
+
+Sitemap: https://litteram.getapp.it/sitemap.xml
